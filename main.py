@@ -170,7 +170,7 @@ async def main():
     print("Arg parse done.")
     gemini_player_dict = {}
 
-    genai.configure(api_key=options.GOOGLE_GEMINI_KEY)
+    genai.configure(api_key=options.GOOGLE_GEMINI_KEY, transport="rest")
 
     # Init bot
     bot = AsyncTeleBot(options.tg_token)
